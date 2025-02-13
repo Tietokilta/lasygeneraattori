@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import LyricsBox from "./components/LyricsBox";
 import SongList from "./components/SongList";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Header />
       <SongList />
+      <LyricsBox />
     </div>
   );
 }
