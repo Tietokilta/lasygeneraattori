@@ -1,4 +1,4 @@
-export type Song = {
+export type SongData = {
   id: number,
   title: string,
   lyrics: string,
