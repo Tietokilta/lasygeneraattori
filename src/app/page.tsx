@@ -7,7 +7,6 @@ import SelectedSongs from "./components/SelectedSongs";
 import { songs } from "./dummydata";
 import { SongData } from "./types";
 import SongBooklet from "./components/SongBooklet";
-//import SongBooklet from "./components/SongBooklet";
 
 export default function Home() {
   const [selectedSong, setSelectedSong] = useState(songs[0]); // Default song
