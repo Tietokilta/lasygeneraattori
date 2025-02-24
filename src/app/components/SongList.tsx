@@ -2,7 +2,7 @@
 
 import { songs } from "../dummydata";
 import { SongData } from "../types";
-import Song from "./Song";
+import SongListItem from "./SongListItem";
 
 type SongListProps = {
   onSelectSong: (song: SongData) => void;
@@ -11,9 +11,9 @@ type SongListProps = {
 
 const SongList = ({ onSelectSong, onAddToSelected }: SongListProps) => {
   return (
-    <div className="border border-black w-80 p-2">
+    <div className="border border-black w-80 m-2">
       {songs.map((song) => (
-        <Song 
+        <SongListItem 
           key={song.id} 
           name={song.title} 
           onClick={() => onSelectSong(song)} 

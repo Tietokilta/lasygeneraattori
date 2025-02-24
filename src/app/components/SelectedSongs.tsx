@@ -1,11 +1,13 @@
+import { SongData } from "../types";
+
 type SelectedSongsProps = {
-  selectedSongs: { id: number; title: string }[];
+  selectedSongs: SongData[];
   onRemoveSong: (songId: number) => void;
 };
 
 const SelectedSongs = ({ selectedSongs, onRemoveSong }: SelectedSongsProps) => {
   return (
-    <div className="border border-black w-80 p-2 mt-4">
+    <div className="border border-black w-80 m-2">
       <h2 className="font-bold">Selected Songs</h2>
       {selectedSongs.length === 0 ? (
         <p className="text-gray-500">No songs selected</p>

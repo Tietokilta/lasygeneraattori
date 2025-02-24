@@ -1,10 +1,10 @@
-type SongProps = {
+type SongListItemProps = {
   name: string;
   onClick: () => void;
   onAdd: () => void;
 };
 
-const Song = ({ name, onClick, onAdd }: SongProps) => {
+const SongListItem = ({ name, onClick, onAdd }: SongListItemProps) => {
   return (
     <div className="border border-black p-2 flex justify-between items-center">
       <span onClick={onClick} className="cursor-pointer">{name}</span>
@@ -15,6 +15,6 @@ const Song = ({ name, onClick, onAdd }: SongProps) => {
   );
 };
 
-export default Song;
+export default SongListItem;
 
 
