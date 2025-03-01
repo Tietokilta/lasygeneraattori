@@ -14,13 +14,14 @@ export default function Home() {
   const [title, setTitle] = useState("My Songbook"); // Default title
   const [date, setDate] = useState(""); // Default empty date
   const [image, setImage] = useState<string | null>(null); // Store image as data URL
+  const [includeTOC, setIncludeToc] = useState<boolean>(false);
 
   return (
     <div className="flex h-screen">
       {/* Left side (50% width) */}
       <div className="w-1/2 flex flex-col p-4">
         <div className="flex">
-          <div className="w-1/2 p-2">
+          <div className="w-1/2 p-2 flex flex-col">
             <SongList
               onSelectSong={setSelectedSong}
               onAddToSelected={(song) =>
@@ -30,21 +31,23 @@ export default function Home() {
               }
             />
           </div>
-          <div className="w-1/2 p-2">
+          <div className="w-1/2 p-2 flex flex-col h-60">
             <FrontpageInfo
               title={title}
               date={date}
               image={image}
-              onChange={(newTitle, newDate, newImage) => {
+              includeTOC={includeTOC}
+              onChange={(newTitle, newDate, newImage, newIncludeToc) => {
                 setTitle(newTitle);
                 setDate(newDate);
                 setImage(newImage);
+                setIncludeToc(newIncludeToc);
               }}
             />
           </div>
         </div>
 
-        <LyricsBox lyrics={selectedSong.lyrics} />
+        <LyricsBox song={selectedSong} />
         <SelectedSongs
           selectedSongs={selectedSongs}
           onRemoveSong={(songId) =>

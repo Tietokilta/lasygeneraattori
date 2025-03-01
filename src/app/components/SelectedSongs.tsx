@@ -7,7 +7,7 @@ type SelectedSongsProps = {
 
 const SelectedSongs = ({ selectedSongs, onRemoveSong }: SelectedSongsProps) => {
   return (
-    <div className="border border-black w-80 m-2">
+    <div className="border border-black w-80 h-80 m-2 overflow-auto">
       <h2 className="font-bold">Selected Songs</h2>
       {selectedSongs.length === 0 ? (
         <p className="text-gray-500">No songs selected</p>

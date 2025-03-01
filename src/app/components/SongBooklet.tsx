@@ -24,7 +24,7 @@ const SongBooklet = ({
   const [iframeSrc, setIframeSrc] = useState<string>(" ");
   const docContent: Content = [];
 
-  // ✅ **Add the front page content**
+  // **Add the front page content**
   // Add title
   docContent.push({
     text: title,
@@ -51,27 +51,25 @@ const SongBooklet = ({
 
   docContent.push(
     { text: " ", margin: [0, 20] },
-    { text: " ", pageBreak: "after" } // ✅ **Page Break after Front Page**
+    { text: " ", pageBreak: "after" } // **Page Break after Front Page**
   );
 
-  // ✅ **Add Songs Starting from Page 2**
+  // Table of contents
+  selectedSongs.forEach((song, index) => {
+    docContent.push(
+      { text: `${index + 1}. ${song.title}`, style: "subheader", tocItem: false}
+    );
+  });
+
+  // Page break after Table of contents
+  docContent.push({ text: " ", pageBreak: "after"});
+
+  // **Add Songs Starting from Page 2**
   selectedSongs.forEach((song, index) => {
     docContent.push(
       { text: `${index + 1}. ${song.title}`, style: "songTitle" },
       { text: song.lyrics, margin: [0, 5] },
       { text: " ", margin: [0, 10] },
-      { text: `${song.title} again`, style: "songTitle" },
-      { text: `${song.lyrics}`, margin: [0, 5] },
-      { text: " ", margin: [0, 10] },
-      { text: `${song.title} yet again`, style: "songTitle" },
-      { text: `${song.lyrics}`, margin: [0, 5] },
-      { text: " ", margin: [0, 10] },
-      { text: `${song.title} to get 12 pages`, style: "songTitle" },
-      { text: `${song.lyrics}`, margin: [0, 5] },
-      { text: " ", margin: [0, 10] },
-      { text: `${song.title} to get 12 PAGES`, style: "songTitle" },
-      { text: `${song.lyrics}`, margin: [0, 5] },
-      { text: " ", margin: [0, 10] }
     );
   });
 

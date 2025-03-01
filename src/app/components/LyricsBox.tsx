@@ -1,11 +1,15 @@
+import { SongData } from "../types";
+
 type LyricsBoxProps = {
-  lyrics: string;
+  song: SongData
 };
 
-const LyricsBox = ({ lyrics }: LyricsBoxProps) => {
+const LyricsBox = ({ song }: LyricsBoxProps) => {
+  console.log(song.lyrics);
   return (
     <div className="border border-black w-80 h-80 m-2 overflow-auto">
-      {lyrics}
+      <h3 className="font-bold">{song.title}</h3>
+      <div className="whitespace-pre-wrap">{song.lyrics}</div>
     </div>
   );
 };

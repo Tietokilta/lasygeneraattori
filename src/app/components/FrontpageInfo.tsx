@@ -1,16 +1,19 @@
+import Image from "next/image";
 import { useRef } from "react";
 
 type FrontpageInfoProps = {
   title: string;
   date: string;
   image: string | null;
-  onChange: (title: string, date: string, image: string | null) => void;
+  includeTOC: boolean;
+  onChange: (title: string, date: string, image: string | null, includeTOC: boolean) => void;
 };
 
 const FrontpageInfo = ({
   title,
   date,
   image,
+  includeTOC,
   onChange,
 }: FrontpageInfoProps) => {
   const inputRef = useRef<HTMLInputElement>(null); // Ref for file input
@@ -21,7 +24,7 @@ const FrontpageInfo = ({
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        onChange(title, date, reader.result as string); // Save as Data URL
+        onChange(title, date, reader.result as string, includeTOC); // Save as Data URL
       };
       reader.readAsDataURL(file);
     }
@@ -36,7 +39,7 @@ const FrontpageInfo = ({
         if (file) {
           const reader = new FileReader();
           reader.onloadend = () => {
-            onChange(title, date, reader.result as string); // Save as Data URL
+            onChange(title, date, reader.result as string, includeTOC); // Save as Data URL
           };
           reader.readAsDataURL(file);
         }
@@ -57,7 +60,7 @@ const FrontpageInfo = ({
         <input
           type="text"
           value={title}
-          onChange={(e) => onChange(e.target.value, date, image)}
+          onChange={(e) => onChange(e.target.value, date, image, includeTOC)}
           placeholder="Enter title"
           className="border p-2 rounded"
         />
@@ -69,9 +72,20 @@ const FrontpageInfo = ({
         <input
           type="date"
           value={date}
-          onChange={(e) => onChange(title, e.target.value, image)}
+          onChange={(e) => onChange(title, e.target.value, image, includeTOC)}
           className="border p-2 rounded"
         />
+      </label>
+
+      {/* Table of Contents Checkbox */}
+      <label className="flex items-center gap-2">
+        <input
+          type="checkbox"
+          checked={includeTOC}
+          onChange={(e) => onChange(title, date, image, e.target.checked)}
+          className="w-5 h-5"
+        />
+        <span className="font-medium">Include Table of Contents</span>
       </label>
 
       {/* Image Upload & Paste */}
@@ -88,11 +102,15 @@ const FrontpageInfo = ({
 
       {/* Show Image Preview */}
       {image && (
-        <img
-          src={image}
-          alt="Uploaded"
-          className="mt-2 max-h-40 object-cover border"
-        />
+        <div className="relative mt-2 w-full h-40 border">
+          <Image
+            src={image}
+            alt="Uploaded"
+            layout="fill"
+            objectFit="cover"
+            className="rounded"
+          />
+        </div>
       )}
     </div>
   );
