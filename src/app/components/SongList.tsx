@@ -11,7 +11,7 @@ type SongListProps = {
 
 const SongList = ({ onSelectSong, onAddToSelected }: SongListProps) => {
   return (
-    <div className="border border-black w-80 m-2">
+    <div className="border border-black w-80 h-80 m-2 overflow-auto">
       {songs.map((song) => (
         <SongListItem 
           key={song.id} 
