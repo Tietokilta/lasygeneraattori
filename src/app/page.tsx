@@ -25,10 +25,10 @@ export default function Home() {
   return (
     <div className="flex h-screen">
       {/* Left side (50% width) */}
-      <div className="w-1/2 flex flex-col border border-black">
+      <div className="w-1/2 flex flex-col border border-black overflow-auto">
         <Header onSelect={setSelectedSection} />
 
-        <div className="p-4">
+        <div className="p-4 flex-1 flex flex-col">
           {selectedSection === "meta" && (
             <FrontpageInfo
               title={title}
@@ -45,7 +45,7 @@ export default function Home() {
           )}
 
           {selectedSection === "songs" && (
-            <div>
+            <>
               <SongList
                 onSelectSong={setSelectedSong}
                 onAddToSelected={(song) =>
@@ -63,7 +63,7 @@ export default function Home() {
                   )
                 }
               />
-            </div>
+            </>
           )}
 
           {selectedSection === "memes" && (

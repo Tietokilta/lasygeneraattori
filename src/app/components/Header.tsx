@@ -4,7 +4,7 @@ type HeaderProps = {
 
 const Header = ({ onSelect }: HeaderProps) => {
   return (
-    <div className="bg-slate-700 w-full h-20 flex items-center justify-center space-x-8 shadow-lg">
+    <div className="bg-slate-700 w-full h-10 flex items-center justify-center space-x-8 shadow-lg">
       <button
         className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
         onClick={() => onSelect("meta")}
