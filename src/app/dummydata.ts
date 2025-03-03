@@ -1,13 +1,10 @@
 import { SongData } from "./types";
 
-
-
 export const songs: SongData[] = [
   {
     id: 1,
     title: "Hyvät ystävät",
-    lyrics: `
-      Hyvät ystävät juhla voi alkaa
+    lyrics: `Hyvät ystävät juhla voi alkaa
       sankarille me nostamme maljaa
       :,: Tääl' ei juodakaan kolmosen kaljaa
       Meille viihdyn suo sampanja vaan :,:.
@@ -24,13 +21,12 @@ export const songs: SongData[] = [
     categories: ["shamppanja", "kalja"],
     language: "FI",
     lines: 12,
-    verses: 3
+    verses: 3,
   },
   {
     id: 2,
     title: "Helan går",
-    lyrics: `
-      En liten fågel satt en gång
+    lyrics: `En liten fågel satt en gång
       Och sjöng i furuskog.
       Han hade sjungit dagen lång
       Men dock ej sjungit nog.
@@ -56,8 +52,7 @@ export const songs: SongData[] = [
   {
     id: 3,
     title: "Elomme päivät",
-    lyrics: `
-      Elomme päivät epäselvät
+    lyrics: `Elomme päivät epäselvät
       kohtalo kova suonut on.
       :,: Kun eilen tulin tänään kotia
       ja tänään tulen huomenna. Huomenta! :,:
@@ -74,8 +69,7 @@ export const songs: SongData[] = [
   {
     id: 4,
     title: "Takki pois",
-    lyrics: `
-    Hei takki poies kiskaiskaamme,
+    lyrics: `Hei takki poies kiskaiskaamme,
     on Polin oiva tapa tää.
     :,: Ja sitten laulu laulakaamme
     niin että katto tärähtää. :,:
@@ -92,8 +86,7 @@ export const songs: SongData[] = [
   {
     id: 5,
     title: "Ken ompi fuksi",
-    lyrics: `
-      Ken ompi fuksi NN
+    lyrics: `Ken ompi fuksi NN
       ylös nouskohon :,:
       Hän lasin käteen ottakoon,
       sen huulillensa nostakoon.
@@ -108,8 +101,7 @@ export const songs: SongData[] = [
   {
     id: 6,
     title: "Ikuisen teekkarin laulu",
-    lyrics: `
-    Talvi-iltain tummentuessa
+    lyrics: `Talvi-iltain tummentuessa
     Polin suojiin me saavumme taas.
     :,: Meidät tekniikka jälkeen on jättänyt,
     sen me tahdomme unhoittaa. :,:
@@ -162,29 +154,32 @@ export const songs: SongData[] = [
     id: 8,
     title: "Tupsulakkikansa",
     lyrics: `Syyttömänä hakemaan,
-Sattui hän
-Tähän kouluun tekniseen ja märkään
-Jossa jo fabuISOt
-Juovuksissa tottakai
-Kolusivat fuksibileet, jos vain lipun sai
-Perinteisen fuksin kohtalon
-Halus välttää poika tuo
-En koskaan osta lakkia
-Enkä koskaan viinaa juo
-Muuten, en valmistu
-Mäkin kassa kutsuu
-Teekkaria kesäisin
-Vaan en tahdo tehdä koskaan lailla ISOn
-Mut kun aTalentista työtä ei saa
-Hälle kipparin koura juottaa väkijuomaa
-Niin Törrösen Ossi taas herää henkiin
-Ja teekkarin elkeet tarttuvat fuksiin
-Kohti laukkaa Viron lauttaa
-Sen fuksin epätoivoon ajaa
-Kun proffa tentin korjaa
-Keskeltä Smökin pihan hiljaa
-Jämeränsilmä tuijottaa
-Kun kirves kohoaa`,
+    Sattui hän
+    Tähän kouluun tekniseen ja märkään
+    Jossa jo fabuISOt
+    Juovuksissa tottakai
+    Kolusivat fuksibileet, jos vain lipun sai
+
+    Perinteisen fuksin kohtalon
+    Halus välttää poika tuo
+    En koskaan osta lakkia
+    Enkä koskaan viinaa juo
+    Muuten, en valmistu
+
+    Mäkin kassa kutsuu
+    Teekkaria kesäisin
+    Vaan en tahdo tehdä koskaan lailla ISOn
+    Mut kun aTalentista työtä ei saa
+    Hälle kipparin koura juottaa väkijuomaa
+    Niin Törrösen Ossi taas herää henkiin
+    Ja teekkarin elkeet tarttuvat fuksiin
+    Kohti laukkaa Viron lauttaa
+
+    Sen fuksin epätoivoon ajaa
+    Kun proffa tentin korjaa
+    Keskeltä Smökin pihan hiljaa
+    Jämeränsilmä tuijottaa
+    Kun kirves kohoaa`,
     categories: [],
     language: "FI",
     lines: 1,
@@ -193,28 +188,26 @@ Kun kirves kohoaa`,
   {
     id: 9,
     title: "Opintolaina",
-    lyrics: `Kun mä opintolainan sain, oli ilta kaunein
-vain.
+    lyrics: `Kun mä opintolainan sain, oli ilta kaunein vain.
 Kaikki viinat ja drinkit alennuksessa
-
-Järki sanoi menkäämme, nukkumaan käm-
-pille
-
+Järki sanoi menkäämme, nukkumaan kämpille
 Mutta vei viina taas turmioon.
+
 Tiskille kun saavuttiin, kukan tuoksu leijui niin
 Olut vaahtosi kuin meri kuohuaa
 Narikkaan siirryttiin, liiat kuteet riisuttiin
 Eteispalvelumaksun verran köyhdyttiin.
+
 Oi jois sulle voisin ostaa lärvilautasen
 Tarjottimen täynnä shottilaseja
 Totta kai se sulle käy, minttuviina riittänee
 Kun mä korttia näin vingutan.
-Vielä yhden hypyn joit, vaikka vessaan
-toikkaroit
+
+Vielä yhden hypyn joit, vaikka vessaan toikkaroit
 Kappas alkoholi lienee lempijuomasi
-Kölön huuleen heitit vain, nenään döfät siitä
-sain
+Kölön huuleen heitit vain, nenään döfät siitä sain
 Pystyit sönköttää vain kuiskuttain.
+
 Oi jos sulle voisin ostaa vettä kuplivaa
 Pullon vichyä tai kannun valtavan
 Kaikki senhän tietänee, litra tuskin riittänee
@@ -231,16 +224,18 @@ Kun sun promillet on noususSAAAA!`,
 sinne saattaa löytää,
 vaikka pöydässänsä pysyy.
 Katson snapsilasia ja ootan unohdusta,
+
 sitsikansan teoissa on pala kadotusta.
 Kännimaa on muutakin
 kuin pelkkää toiveunta.
 Kännimaa on ihmismielen rauhan valtakunta.
+
 Eikä sinne matka silloin kovin kauan kestä,
 Kännimaa kun teekkarilta löytyy sydämestä!
 Kännimaasta kuvitellaan paljon kaikenlaista,
 kuinka miehet komistuu ja on niin satumaista.
-Kun pöytäavec ongelmistaan koko illan
-jauhaa,
+
+Kun pöytäavec ongelmistaan koko illan jauhaa,
 glögilasin pohjalta mä löydän mielenrauhaa!
 Kännimaa on muutakin kuin alku sekä loppu.
 Kännimaa on huoleton ja siellä ei oo hoppu.
@@ -258,10 +253,12 @@ kännimaa kun teekkareilta löytyy sydämestä!`,
 otamme taas,
 otamme taas,
 otamme taas! ;,;
+
 Otamme taas,
 otamme taas!
 Otamme taas,
 otamme taas.
+
 Otamme taas,
 otamme taas,
 otamme taas,
@@ -278,10 +275,12 @@ otamme taas!`,
 seisoo vielä Smökki paikallaan.
 Kun ostoskeskuksen ohi kuljen, tiedän sen,
 kohta tullut oon OtaOnnelaan.
+
 Hei tarjoilija, tuokaa mulle kolpakko,
 yhtä kylmä niin kuin aina ennenkin.
 Mullon kova jano taas ja sitsit mielessä,
 en turhaan tullut oo OtaOnnelaan.
+
 Otan Niemellä, maistan kielellä,
 äijät sitsaa lailla perkeleen.
 Ja kun kilta ottaa häppää,
@@ -289,6 +288,7 @@ se heittää huonoo läppää,
 kaljaa koneeseen ja OtaOnnelaan
 Naananaananaa nanananaaaa!
 Kaljaa koneeseen ja Otaniemeen!
+
 On Otaniemen ilta ja mulla aasinsilta,
 Josta lähtee laulu laulamaan.
 Me opiskellaan kerran, ei meitä pelko Ferran
@@ -307,20 +307,17 @@ Otan Niemellä, skriptikielellä! ...`,
     id: 13,
     title: "Mellansup",
     lyrics: `Mellansup, huudan mellansup
-
-Kukaan aasinsiltaa loppumaan ei saa milloin-
-kaan
-
+Kukaan aasinsiltaa loppumaan ei saa milloinkaan
 Mellansup, huudan mellansup
 Hei juttele sä vaan, mä haluan jo laulamaan
+
 Gongin seisahtuvan tahdon
 Hiljentyvän lyöntien
 Baariin lähteä en saa
 Hukkuu aasi viimeinen
-Tahdon syödä vielä lämpimänä
-annoksen
-Tuolta saapuu
-tarjoilija vieden lautasen
+Tahdon syödä vielä lämpimänä annoksen
+Tuolta saapuu tarjoilija vieden lautasen
+
 Nään jo sen, vitsin viimeisen
 Fuksilauluun jätän lasin pohjalle tilkkasen
 Mieltä syö, kärsimysten yö
@@ -342,8 +339,7 @@ silta jatkuu ainiaan`,
   {
     id: 14,
     title: "Ajankohtainen juomalaulu",
-    lyrics: `Kun ajankohtais juomalaulu otaniemes
-luodaan
+    lyrics: `Kun ajankohtais juomalaulu otaniemes luodaan
 kaikki laulun referenssit Jodelista tuodaan
 Hura huh hah hei!
 Kuka on se vitun Juuso,
@@ -351,15 +347,17 @@ joka päärynällä heitti lujaa seinää päin.
 Unohdetaan runoilu ja muutkin paradigmat
 lukkaristo nauraa jos vain joku sanoo ligma
 Hura huh hah hei!
+
 Mikä ihmeen välihuuto,
 kun shubiduvaa kaikuu sitsikansalta
 Tavutukset vituttaa myös aivan perkeleesti
 tahdittakaa laulunne edes ___ selkeesti
+
 Hura huh hah hei!
 Mikä ihmeen täytesana?
 Pitäisikö laului tehdä sitten nytten näin
-Kun ajankohtais juomalaulu otaniemes
-luodaan
+
+Kun ajankohtais juomalaulu otaniemes luodaan
 nykyajan ajatukset tuleville vuotaa
 Hura huh hah hei!
 Moro fuksi kolmeseiska
@@ -372,8 +370,7 @@ mietit varmaan mikä ihmeen biisi tääkin on.`,
   {
     id: 15,
     title: "Jallu-beibi",
-    lyrics: `
-      Kuka sä oot
+    lyrics: `Kuka sä oot
 ja mitä teet kun saat mut anelemaan ”pliis”,
 mä sinut riisun, aromis on viis kaut’ viis
 ja tajuan et kohta mennään jälleen
@@ -407,8 +404,7 @@ Tähden luota ei oo takas paluuta`,
   {
     id: 16,
     title: "Vesipoikien marssi",
-    lyrics: `
-      Pois se meistä, että täällä maisteltais'
+    lyrics: `Pois se meistä, että täällä maisteltais'
 noita pahan tuomia alkoholijuomia.
 Vaikka keltä henki kohta haisteltais',
 niin huugo raikas sois'.
@@ -434,8 +430,7 @@ Hurraa, me nuoret...`,
   {
     id: 21,
     title: "Elomme päivät",
-    lyrics: `
-      Elomme päivät epäselvät
+    lyrics: `Elomme päivät epäselvät
       kohtalo kova suonut on.
       :,: Kun eilen tulin tänään kotia
       ja tänään tulen huomenna. Huomenta! :,:
@@ -452,8 +447,7 @@ Hurraa, me nuoret...`,
   {
     id: 17,
     title: "Ko-ko-ko-kosken-ko-ko-ko-korvaa",
-    lyrics: `
-      Ko-ko-ko-kosken-ko-ko-ko-korvaa,
+    lyrics: `Ko-ko-ko-kosken-ko-ko-ko-korvaa,
 siitä aina kunnon rä-kä-kä-kännit saa.
 Ko-ko-ko-kosken-ko-ko-ko-korvaa,
 siitä aina kunnon rä-kä-kä-kännit,
@@ -469,8 +463,7 @@ siellä aina kunnon rä-kä-kä-kännit saa...`,
   {
     id: 18,
     title: "Elomme päivät",
-    lyrics: `
-      Elomme päivät epäselvät
+    lyrics: `Elomme päivät epäselvät
       kohtalo kova suonut on.
       :,: Kun eilen tulin tänään kotia
       ja tänään tulen huomenna. Huomenta! :,:
@@ -487,8 +480,7 @@ siellä aina kunnon rä-kä-kä-kännit saa...`,
   {
     id: 19,
     title: "Aqua vera",
-    lyrics: `
-      Lauletaanpas vedestä, jota aina riittää.
+    lyrics: `Lauletaanpas vedestä, jota aina riittää.
 Vaikka kuinka joisit sä, ei se lopu siitä.
 Pikku Aqun jano on,
 niin myös Paulin, Anteron.
@@ -513,8 +505,7 @@ Ett, två, tre, FYRA!`,
   {
     id: 20,
     title: "kaks kisälliä",
-    lyrics: `
-      Kaks kisälliä kulki maantietä laulellen.
+    lyrics: `Kaks kisälliä kulki maantietä laulellen.
 He laulussaan toi julki ylevän aattehen:
 “Jos kaikki Suomen järvet, viinaksi muuttuisi,
 niin eikös meidän poikain, elellä kelpaisi!”
@@ -536,4 +527,4 @@ Kaljaa...`,
     lines: 8,
     verses: 2,
   },
-]
+];
