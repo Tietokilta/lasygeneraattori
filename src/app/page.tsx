@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="flex h-screen">
       {/* Left side (50% width) */}
-      <div className="w-1/2 flex flex-col p-4">
+      <div className="w-1/2 flex flex-col p-4 border border-black">
         <div className="flex">
           <div className="w-1/2 p-2 flex flex-col">
             <SongList
@@ -57,7 +57,7 @@ export default function Home() {
       </div>
 
       {/* Right side - SongBooklet (50% width) */}
-      <div className="w-1/2 flex justify-center p-4">
+      <div className="w-1/2 flex justify-center p-4 border border-black overflow-auto">
         <SongBooklet
           selectedSongs={selectedSongs}
           title={title}
