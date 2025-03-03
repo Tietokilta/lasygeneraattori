@@ -7,6 +7,7 @@ import { songs } from "./dummydata";
 import { SongData } from "./types";
 import SongBooklet from "./components/SongBooklet";
 import FrontpageInfo from "./components/FrontpageInfo";
+import Header from "./components/Header";
 
 export default function Home() {
   const [selectedSong, setSelectedSong] = useState(songs[0]); // Default song
@@ -16,22 +17,19 @@ export default function Home() {
   const [image, setImage] = useState<string | null>(null); // Store image as data URL
   const [includeTOC, setIncludeToc] = useState<boolean>(false);
 
+  // State for tracking selected section (Meta, Songs, Memes)
+  const [selectedSection, setSelectedSection] = useState<
+    "meta" | "songs" | "memes"
+  >("meta");
+
   return (
     <div className="flex h-screen">
       {/* Left side (50% width) */}
-      <div className="w-1/2 flex flex-col p-4 border border-black">
-        <div className="flex">
-          <div className="w-1/2 p-2 flex flex-col">
-            <SongList
-              onSelectSong={setSelectedSong}
-              onAddToSelected={(song) =>
-                setSelectedSongs((prev) =>
-                  prev.some((s) => s.id === song.id) ? prev : [...prev, song]
-                )
-              }
-            />
-          </div>
-          <div className="w-1/2 p-2 flex flex-col h-60">
+      <div className="w-1/2 flex flex-col border border-black">
+        <Header onSelect={setSelectedSection} />
+
+        <div className="p-4">
+          {selectedSection === "meta" && (
             <FrontpageInfo
               title={title}
               date={date}
@@ -44,16 +42,34 @@ export default function Home() {
                 setIncludeToc(newIncludeToc);
               }}
             />
-          </div>
-        </div>
+          )}
 
-        <LyricsBox song={selectedSong} />
-        <SelectedSongs
-          selectedSongs={selectedSongs}
-          onRemoveSong={(songId) =>
-            setSelectedSongs((prev) => prev.filter((s) => s.id !== songId))
-          }
-        />
+          {selectedSection === "songs" && (
+            <div>
+              <SongList
+                onSelectSong={setSelectedSong}
+                onAddToSelected={(song) =>
+                  setSelectedSongs((prev) =>
+                    prev.some((s) => s.id === song.id) ? prev : [...prev, song]
+                  )
+                }
+              />
+              <LyricsBox song={selectedSong} />
+              <SelectedSongs
+                selectedSongs={selectedSongs}
+                onRemoveSong={(songId) =>
+                  setSelectedSongs((prev) =>
+                    prev.filter((s) => s.id !== songId)
+                  )
+                }
+              />
+            </div>
+          )}
+
+          {selectedSection === "memes" && (
+            <div className="text-center text-xl">Memes Section</div>
+          )}
+        </div>
       </div>
 
       {/* Right side - SongBooklet (50% width) */}

@@ -12,11 +12,14 @@ const SelectedSongs = ({ selectedSongs, onRemoveSong }: SelectedSongsProps) => {
       {selectedSongs.length === 0 ? (
         <p className="text-gray-500">No songs selected</p>
       ) : (
-        selectedSongs.map((song) => (
-          <div key={song.id} className="flex justify-between items-center p-1 border-b">
-            <span>{song.title}</span>
-            <button 
-              onClick={() => onRemoveSong(song.id)} 
+        selectedSongs.map((song, index) => (
+          <div
+            key={song.id}
+            className="flex justify-between items-center p-1 border-b"
+          >
+            <span>{`${index + 1}. ${song.title}`}</span>
+            <button
+              onClick={() => onRemoveSong(song.id)}
               className="bg-red-500 text-white px-2 py-1 rounded"
             >
               Remove
@@ -29,4 +32,3 @@ const SelectedSongs = ({ selectedSongs, onRemoveSong }: SelectedSongsProps) => {
 };
 
 export default SelectedSongs;
-
